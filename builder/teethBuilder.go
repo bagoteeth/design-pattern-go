@@ -1,9 +1,7 @@
 package builder
 
 type TeethBuilder struct {
-	Height   int
-	Weight   int
-	Material string
+	Product
 }
 
 func NewTeethBuilder() BuilderIntf {
