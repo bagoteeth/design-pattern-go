@@ -22,14 +22,14 @@ type AssetNode struct {
 	App       string `json:"app"`
 }
 
-func ClassifyNode(node AssetNode) AssetNodeIntf {
+func (node *AssetNode) Transform() AssetNodeIntf {
 	switch node.NodeType {
 	case TYPE_HOST:
-		return &Host{AssetNode: node}
+		return &Host{AssetNode: *node}
 	case TYPE_APP:
-		return &App{AssetNode: node}
+		return &App{AssetNode: *node}
 	case TYPE_CONTAINER:
-		return &Container{AssetNode: node}
+		return &Container{AssetNode: *node}
 	}
 	return nil
 }

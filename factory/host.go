@@ -5,13 +5,13 @@ type Host struct {
 }
 
 func (c *Host) GetCnnfEvent() map[string]interface{} {
-	return map[string]interface{}{"host1": "cnnf1"}
+	return nil
 }
 
 func (c *Host) GetRuntimeEvent() map[string]interface{} {
-	return map[string]interface{}{"host1": "runtime1"}
+	return nil
 }
 
 func (c *Host) GetHipsEvent() map[string]interface{} {
-	return map[string]interface{}{"host1": "hips1"}
+	return nil
 }
